@@ -13,7 +13,7 @@ document.addEventListener("deviceready", init, false);
 function init(){
 	bluetoothSerial.list(function(devices) {
 		devices.forEach(function(device) {
-			$("#test").text(device.id);
+			$("#test").val("test");
 		})
 	}, failure);
 }
@@ -30,7 +30,12 @@ function init(){
 			<li><a href="#page2">Strona 2</a></li>
             <li><a href="#page3">Strona 3</a></li>
 			<li><a href="#page4">Strona 4</a></li>
-		</ul>		
+		</ul>
+        <div id="test">
+          <div data-role="fieldcontain">
+            <input type="text" name="textinput" id="test" value=""  />
+          </div>
+        </div>	
 	</div>
 	<div data-role="footer">
 		<h4>Stopka strony</h4>
@@ -41,7 +46,7 @@ function init(){
 	<div data-role="header">
 		<h1>Strona 2</h1>
 	</div>
-	<div data-role="content" id="test">	
+	<div data-role="content">	
 		Zawartość		
 	</div>
 	<div data-role="footer">
