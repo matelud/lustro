@@ -9,7 +9,6 @@
 <script type="application/javascript">
 
 document.addEventListener("deviceready", init, false);
-
 function init(){
 	bluetoothSerial.list(function(devices) {
 		devices.forEach(function(device) {
@@ -17,8 +16,6 @@ function init(){
 		})
 	}, failure);
 }
-
-
 </script>
 </head> 
 <body onLoad="init()"> 
