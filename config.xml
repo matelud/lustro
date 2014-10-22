@@ -4,12 +4,12 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.helloworld"
-        version   = "1.0.0">
+        version   = "0.0.1">
 
     <name>Magic Mirror</name>
 
     <description>
-        Aplikacja do zarządzania Lustrem.
+        Magic Mirror application
     </description>
 
     <author href="http://phonegap.com" email="matelud@gmail.com">
