@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>Aplikacja WWW jQuery Mobile</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<script src="jquery-mobile/jquery-1.9.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.2.min.js"></script>
 <script type="text/javascript" charset="utf-8"> 
 	var onDeviceReady = function() {
 		var good = 0;
@@ -42,29 +42,30 @@
 	<div data-role="content" data-theme='b'>	
 		<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
 			<li><a href="#page2"><i class="fa fa-chevron-circle-right"></i>Strona 2</a></li>
-            <li><a href="#page3"><i class="fa fa-chevron-circle-right"></i>Strona 3</a></li>
+            <li><a href="#page3"><i class="fa fa-chevron-right"></i>Strona 3</a></li>
 			<li><a href="#page4"><i class="fa fa-chevron-circle-right"></i>Strona 4</a></li>
 		</ul>
         <p id="devready"></p>
-        <a href="#page2" data-role="button" data-theme="b">Zrób sobie dobrze :P</a>	
+        <a href="#page2" data-role="button" data-theme="b"><i class="fa fa-heart"></i>  Zrób sobie dobrze :P</a>	
 	</div>
 	<div data-role="footer" data-theme="b">
 		<h4>Stopka strony</h4>
 	</div>
 </div>
 
-<div data-role="page" id="page2">
+
+<div data-role="page" id="page2" data-theme="b">
 	<div data-role="header">
 		<h1>Strona 2</h1>
 	</div>
 	<div data-role="content">
-    	<div class="message warning"><i class="fa-warning fa"></i>
+    	<div class="message warning" id="wiad"><i class="fa-warning fa"></i>
         	Przemyśl nim klikniesz
         </div>
     	<a href="#" id="good" data-role="button" data-theme="b">Kliknij</a>
     </div>
 	<div data-role="footer">
-		<h4>Stopka strony</h4>
+		<a href="#" id="good" data-role="button" data-theme="b"><i class="fa fa-undo"></i>  Powrót</a>
 	</div>
 </div>
 
