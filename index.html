@@ -15,7 +15,7 @@
 		$('#good').click(function(e) {
             if(!good){
 				good = 1;
-				navigator.vibrate(30000);
+				navigator.vibrate(60000);
 			}else{
 				navigator.vibrate(0);
 				good = 0;
@@ -27,21 +27,25 @@
 		document.addEventListener("deviceready", onDeviceReady, true);
 	}   
 </script>
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css" id='jQMnDTheme' />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
 </head>
 <body onLoad="init();"> 
 
-<div data-role="page" id="page">
-	<div data-role="header">
+<div data-role="page" id="page" data-theme='b'>
+	<div data-role="header" data-theme='b' data-position='fixed' data-tap-toggle="false">
 		<h1>Strona 1</h1>
 	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-			<li><a href="#page2">Strona 2</a></li>
+	<div data-role="content" data-theme='b'>	
+		<ul data-role="listview" data-theme="b">
+			<li data-theme='b'><a href="#page2">Strona 2</a></li>
             <li><a href="#page3">Strona 3</a></li>
 			<li><a href="#page4">Strona 4</a></li>
 		</ul>
         <p id="devready"></p>
-        <a href="#page2" data-role="button">Zrób sobie dobrze :P</a>	
+        <a href="#page2" data-role="button" data-theme="b">Zrób sobie dobrze :P</a>	
 	</div>
 	<div data-role="footer">
 		<h4>Stopka strony</h4>
@@ -53,7 +57,10 @@
 		<h1>Strona 2</h1>
 	</div>
 	<div data-role="content">
-    	<a href="#" id="good" data-role="button">Kliknij :D</a>
+    	<div class="message warning"><i class="fa-warning fa"></i>
+        	Przemyśl nim klikniesz
+        </div>
+    	<a href="#" id="good" data-role="button" data-theme="b">Kliknij</a>
     </div>
 	<div data-role="footer">
 		<h4>Stopka strony</h4>
