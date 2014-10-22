@@ -8,16 +8,25 @@
 <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
 <script type="text/javascript" charset="utf-8"> 
 	var onDeviceReady = function() {
-		document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
-		navigator.notification.alert("Hello World of PhoneGap");
-		navigator.vibrate(1000);
+		var good = 0;
+		//navigator.notification.alert("Cześć Kinga :)");
+		navigator.vibrate(500);
+		
+		$('#good').click(function(e) {
+            if(!good){
+				navigator.vibrate(30000);
+				good = 1;
+			}else{
+				navigator.vibrate(200);
+			}
+        });
 	};
 	
 	function init() {
 		document.addEventListener("deviceready", onDeviceReady, true);
 	}   
 </script>
-</head> 
+</head>
 <body onLoad="init();"> 
 
 <div data-role="page" id="page">
@@ -30,7 +39,8 @@
             <li><a href="#page3">Strona 3</a></li>
 			<li><a href="#page4">Strona 4</a></li>
 		</ul>
-        <p id="devready"></p>		
+        <p id="devready"></p>
+        <a href="#page2" data-role="button">Zrób sobie dobrze :P</a>	
 	</div>
 	<div data-role="footer">
 		<h4>Stopka strony</h4>
@@ -41,9 +51,9 @@
 	<div data-role="header">
 		<h1>Strona 2</h1>
 	</div>
-	<div data-role="content">	
-		Zawartość		
-	</div>
+	<div data-role="content">
+    	<a href="#" id="good" data-role="button">Kliknij :D</a>
+    </div>
 	<div data-role="footer">
 		<h4>Stopka strony</h4>
 	</div>
