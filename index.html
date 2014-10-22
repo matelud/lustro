@@ -9,14 +9,18 @@
 <script type="text/javascript" src="cordova.js"></script>
 <script type="application/javascript">
 
-document.addEventListener("deviceready", init, false);
 function init(){
+	document.addEventListener("deviceready", test, false);
+}
+
+function test(){
 	bluetoothSerial.list(function(devices) {
 		devices.forEach(function(device) {
-			$("#test").val("test");
+			$("#test").text("testujemy");
 		})
 	}, failure);
 }
+
 </script>
 </head> 
 <body onLoad="init()"> 
