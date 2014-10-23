@@ -14,6 +14,15 @@
 		navigator.notification.alert("Cześć Kinga :)");
 		navigator.vibrate(500);
 		
+		document.addEventListener("backbutton", function(e){
+			if($.mobile.activePage.is('#page')){
+				navigator.app.exitApp();
+			}
+			else {
+				navigator.app.backHistory()
+			}
+		}, false);
+		
 		$('#good').click(function(e) {
             if(!good){
 				good = 1;
