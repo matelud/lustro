@@ -18,10 +18,11 @@
             if(!good){
 				good = 1;
 				mess.removeClass('warning').addClass('success');
+				mess.removeClass('error').addClass('success');
 				navigator.vibrate(60000);
 			}else{
 				navigator.vibrate(0);
-				mess.removeClass('warning').addClass('error');
+				mess.removeClass('success').addClass('error');
 				good = 0;
 			}
         });
