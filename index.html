@@ -11,8 +11,22 @@
 	var onDeviceReady = function() {
 		var good = 0;
 		var mess = $('#wiad');
-		navigator.notification.alert("Cześć Kinga :)");
+		var blue_act = 0;
+		//navigator.notification.alert("Cześć Kinga :)");
 		navigator.vibrate(500);
+		$('#page3').on("pageshow", function(){
+			bluetoothSerial.isEnabled(
+				function() {
+					blue_act = 1;
+				},
+				function() {
+					navigator.notification.alert("Włącz Bluetooth");
+				}
+			);
+			if(blue_act){
+				var lista = bluetoothSerial.list();				
+			}
+		});
 		
 		document.addEventListener("backbutton", function(e){
 			if($.mobile.activePage.is('#page')){
