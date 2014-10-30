@@ -24,7 +24,12 @@
 				}
 			);
 			if(blue_act){
-				var lista = bluetoothSerial.list();				
+				var lista = bluetoothSerial.list();
+				for(i=0; i<lista.length; i++){
+					$('#lista_bluetooth').append('<li>'+lista.name+'1</li>');
+					$('#lista_bluetooth').append('<li>'+lista.item.name+'2</li>');
+					$('#lista_bluetooth').append('<li>'+item.lista.name+'3</li>');
+				}
 			}
 		});
 		
@@ -102,7 +107,8 @@
 		<h1>Strona 3</h1>
 	</div>
 	<div data-role="content">	
-		Zawartość		
+		<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b" id="lista_bluetooth">
+        </ul>		
 	</div>
 	<div data-role="footer">
 		<h4>Stopka strony</h4>
